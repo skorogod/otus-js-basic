@@ -20,7 +20,5 @@ jobs:
         uses: mshick/add-pr-comment@v1 # update the version as needed
         with:
           # required inputs for sandbox-launch-action to specify the target template.
-          message: 
-            You can check this code at sandbox using this link
+          message: You can check this code at sandbox using this link
             https://githubbox.com/${{github.repository}}/tree/${{github.head_ref}}
-          

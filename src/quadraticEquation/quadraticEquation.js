@@ -1,19 +1,14 @@
 function quadraticEquation() {
-    let a = Number(prompt('enter a:'));
-    let b = Number(prompt('enter b:'));
-    let c = Number(prompt('enter c:'));
+  const a = Number(window.prompt("enter a:"));
+  const b = Number(window.prompt("enter b:"));
+  const c = Number(window.prompt("enter c:"));
 
-    console.log(a, b, c)
+  const D = b ** 2 - 4 * a * c;
 
-    let D = Math.pow(b, 2) - 4*a*c;
+  const x1 = (-b + Math.sqrt(D)) / (2 * a);
+  const x2 = (-b - Math.sqrt(D)) / (2 * a);
 
-    let x1 = (-b + Math.sqrt(D))/(2*a);
-    let x2 = (-b - Math.sqrt(D))/(2*a);
-
-    console.log(x1, x2 )
-
-    return [x1, x2];
-
+  return [x1, x2];
 }
 
 module.exports = quadraticEquation;

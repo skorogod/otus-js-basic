@@ -1,5 +1,3 @@
-const calcDiff = (a, b) => {
-    return Math.abs(a - b);
-}
+const calcDiff = (a, b) => Math.abs(a - b);
 
 module.exports = calcDiff;

@@ -1,19 +1,24 @@
-const ageUser = require('./ageUser');
+const ageUser = require("./ageUser");
 
-describe('ageUser', () => {
-    const promptSpy = jest.spyOn(window, 'prompt');
+describe("ageUser", () => {
+  const promptSpy = jest.spyOn(window, "prompt");
+  let user;
 
-    beforeEach(() => {
-        user = {name: 'John'};
-    })
+  beforeEach(() => {
+    user = { name: "John" };
+  });
 
-    test('check ageUser is a function', () => {
-        expect(ageUser).toBeInstanceOf(Function);
-    })
+  test("check ageUser is a function", () => {
+    expect(ageUser).toBeInstanceOf(Function);
+  });
 
-    test("return {name: 'John', age: 18}", () => {
-        promptSpy.mockReturnValue('18');
-        expect(JSON.stringify(ageUser(user))).toEqual(JSON.stringify({name: 'John', age: 18}));
-
-    })
-})
+  test("return {name: 'John', age: 18}", () => {
+    promptSpy.mockReturnValue("18");
+    expect(JSON.stringify(ageUser(user))).toEqual(
+      JSON.stringify({ name: "John", age: 18 }),
+    );
+  });
+  afterAll(() => {
+    promptSpy.mockReset();
+  });
+});

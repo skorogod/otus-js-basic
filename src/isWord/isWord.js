@@ -1,5 +1,3 @@
-const isWord = (str) => {
-    return str.split(' ').length > 1 ? false : true;
-}
+const isWord = (str) => !(str.split(" ").length > 1);
 
 module.exports = isWord;

@@ -1,7 +1,7 @@
-function userAdmin(user){
-    user_copy = Object.assign({}, user);
-    user_copy.role = "admin";
-    return user_copy;
+function userAdmin(user) {
+  const userCopy = { ...user };
+  userCopy.role = "admin";
+  return userCopy;
 }
 
-module.exports = userAdmin
+module.exports = userAdmin;

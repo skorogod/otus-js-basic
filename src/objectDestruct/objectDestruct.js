@@ -1,7 +1,7 @@
-function objectDestruct(admin_obj) {
-    let {name, role} = admin_obj;
-    
-    return [name, role];
-} 
+function objectDestruct(adminObj) {
+  const { name, role } = adminObj;
+
+  return [name, role];
+}
 
 module.exports = objectDestruct;

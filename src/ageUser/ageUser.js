@@ -1,12 +1,10 @@
+const user = { name: "John" };
 
-let user = {name: 'John'};
+function ageUser() {
+  const age = window.prompt("enter age");
+  user.age = +age;
 
-function ageUser(){
-    let age = prompt('enter age');
-    user['age'] = +age;
-    console.log(user)
-
-    return user;
+  return user;
 }
 
 module.exports = ageUser;

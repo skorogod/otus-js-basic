@@ -1,20 +1,15 @@
-const minMaxElements = require('./minMaxElements');
+const minMaxElements = require("./minMaxElements");
 
-describe('minMaxElements', () => {
-    const log = console.log;
+describe("minMaxElements", () => {
+  const logSpy = jest.spyOn(console, "log");
 
-    beforeAll(() => {
-        console.log = jest.fn();
-    });
+  afterAll(() => {
+    logSpy.mockReset();
+  });
 
-    afterAll(() => {
-        console.log = log;
-    });
-
-
-    test('min is 2 max is 25 for [6,20,12,4,2,25]', () => {
-        let arr = [6,20,12,4,2,25];
-        minMaxElements(arr);
-        expect(console.log).toHaveBeenCalledWith('min = 2, max = 25');
-    })
-})
+  test("min is 2 max is 25 for [6,20,12,4,2,25]", () => {
+    const arr = [6, 20, 12, 4, 2, 25];
+    minMaxElements(arr);
+    expect(logSpy).toHaveBeenCalledWith("min = 2, max = 25");
+  });
+});
