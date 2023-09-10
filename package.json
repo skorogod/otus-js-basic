@@ -22,7 +22,7 @@
   "homepage": "https://github.com/skorogod/otus-js-basic-korogod#readme",
   "devDependencies": {
     "@babel/preset-env": "^7.22.10",
-    "@testing-library/react": "^12.1.2",
+    "@testing-library/react": "^14.0.0",
     "@types/jest": "^29.5.4",
     "babel-eslint": "^10.1.0",
     "babel-jest": "^29.6.4",
@@ -41,12 +41,9 @@
     "pre-commit": "^1.2.2",
     "prettier": "3.0.3"
   },
-  "dependencies": {
-    "@testing-library/user-event": "^14.4.3",
-    "react-dom": "^18.2.0"
-  },
   "lint-staged": {
     "*.js": "eslint --fix",
     "*.{js,css}": "prettier --write"
-  }
+  },
+  "_id": "otus-js-basic-korogod@1.0.0"
 }
