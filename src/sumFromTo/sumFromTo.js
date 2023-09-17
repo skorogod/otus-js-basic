@@ -1,11 +1,10 @@
 function sumFromTo() {
-  const arr = [];
+  let sum = 0;
 
   for (let i = 50; i <= 100; i++) {
-    arr.push(i);
+    sum += i;
   }
-
-  return arr.reduce((prev, curr) => prev + curr, 0);
+  return sum;
 }
 
 module.exports = sumFromTo;

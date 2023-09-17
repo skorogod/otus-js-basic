@@ -1,7 +1,6 @@
 function getSeconds() {
-  const dayStart = new Date("2023-09-06T00:00:00");
-  const now = Date.now();
-  const diff = (now - dayStart) / 1000 / 60;
+  const date = new Date();
+  const diff = (Date.now() - date.setHours(0, 0, 0, 0)) / 1000 / 60;
   console.log(diff.toFixed(0));
 }
 

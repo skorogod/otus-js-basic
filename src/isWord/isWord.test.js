@@ -16,4 +16,8 @@ describe("isWord", () => {
   it('"hello " contain 1 word', () => {
     expect(isWord("hello")).toBeTruthy();
   });
+
+  it('" hello " contain 1 word', () => {
+    expect(isWord(" hello ")).toBeTruthy();
+  });
 });
